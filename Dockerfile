@@ -15,6 +15,9 @@ RUN npm install request --global
 RUN npm install base-64 --global
 RUN npm install utf8 --global
 
+RUN echo -e "\nexport NODE_PATH=/usr/lib/node_modules" >> /root/.bashrc
+
+
 ADD run.sh /tmp/run.sh
 RUN chmod u+x /tmp/run.sh
 
