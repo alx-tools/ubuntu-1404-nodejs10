@@ -6,6 +6,7 @@ RUN apt-get update
 
 RUN apt-get install -y curl wget git
 
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
