@@ -1,5 +1,4 @@
 # Container for developing in NodeJS 10.x at Holberton School
-
 FROM holbertonschool/base-ubuntu-1404
 MAINTAINER Guillaume Salva <guillaume@holbertonschool.com>
 
@@ -17,9 +16,8 @@ RUN npm install utf8 --global
 
 RUN echo "export NODE_PATH=/usr/lib/node_modules" >> /root/.bashrc
 
-
-ADD run.sh /tmp/run.sh
-RUN chmod u+x /tmp/run.sh
+ADD run.sh /etc/sandbox_run.sh
+RUN chmod u+x /etc/sandbox_run.sh
 
 # start run!
-CMD ["./tmp/run.sh"]
+CMD ["./etc/sandbox_run.sh"]
